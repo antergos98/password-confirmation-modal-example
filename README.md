@@ -3,6 +3,14 @@
 This project is used as an example to show how I built a Blade component that can ask the user to confirm their password before doing a specific action. This requires almost no javascript code and it wouldn't be possible without the power and magic that Alpine and Livewire together provides!
 
 
+## Installation
+```bash
+cp .env.example .env
+composer install
+php artisan key:generate
+php artisan migrate --seed
+```
+
 Usage:
 
 ```html
