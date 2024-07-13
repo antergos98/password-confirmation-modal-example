@@ -10,11 +10,11 @@ cp .env.example .env
 composer install
 php artisan key:generate
 php artisan migrate --seed
+npm i && npm run dev
 php artisan serve
 ```
 
-Now, if you can visit localhost:8000 and try it out. The correct password is `password` because this is the default password of the dummy created by the seeder.
-
+Now, if you can visit localhost:8000 and try it out. Log in with `test@example.com / password` and try both buttons.
 ## Usage
 
 ```html

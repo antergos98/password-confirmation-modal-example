@@ -19,8 +19,10 @@ class ConfirmPasswordDialog extends Component
 
         $this->validate(['password' => 'required']);
 
-        if (auth()->guard()->validate(['email' => 'test@example.com', 'password' => $this->password])) {
+        if (auth()->guard()->validate(['email' => auth()->user()->email, 'password' => $this->password])) {
             $this->dispatch('password-confirmed');
+
+            session()->put('auth.password_confirmed_at', now()->unix());
 
             return;
         }
