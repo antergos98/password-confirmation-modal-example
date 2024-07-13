@@ -16,7 +16,7 @@ class ConfirmPasswordDialog extends Component
     public function verify(): void
     {
         $this->clearValidation();
-        
+
         $this->validate(['password' => 'required']);
 
         if (auth()->guard()->validate(['email' => 'test@example.com', 'password' => $this->password])) {
