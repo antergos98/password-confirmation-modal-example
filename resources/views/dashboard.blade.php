@@ -38,7 +38,6 @@
                 Perform protected action (with modal)
             </x-action-button>
 
-
             <p>This button will execute the POST request on specified without a confirmation modal, but Laravel will redirect to a password confirm page because of the <code>password.confirm</code> middleware. This is the default behaviour, but in some cases it is not the best UX.</p>
             <x-action-button
                 :confirm="false"

@@ -3,10 +3,13 @@
 
 @if($confirm)
     <div
-        x-data="{ modal: new bootstrap.Modal(Livewire.getByName('confirm-password-dialog')[0].$el.children[0]) }"
+        x-data="{ modal: new bootstrap.Modal(Livewire.first().$el.children[0]) }"
         @password-confirmed="$refs.form.submit();"
     >
-        <livewire:confirm-password-dialog />
+        @once
+            <livewire:confirm-password-dialog />
+        @endonce
+
         <form x-ref="form" @submit.prevent="modal.toggle()" action="{{ $action }}" method="POST">
             @csrf
             @method($method)
