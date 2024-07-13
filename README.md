@@ -14,7 +14,7 @@ npm i && npm run build
 php artisan serve
 ```
 
-Now, if you can visit localhost:8000 and try it out. Log in with `test@example.com / password` and try both buttons.
+Now, you may visit localhost:8000 and try it out. Log in with `test@example.com / password` and try both buttons.
 ## Usage
 
 ```html
