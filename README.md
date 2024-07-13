@@ -10,7 +10,7 @@ cp .env.example .env
 composer install
 php artisan key:generate
 php artisan migrate --seed
-npm i && npm run dev
+npm i && npm run build
 php artisan serve
 ```
 
