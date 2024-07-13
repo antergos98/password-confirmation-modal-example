@@ -7,7 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/protected', function(): RedirectResponse {
+Route::post('/protected', function (): RedirectResponse {
     session()->flash('message', 'It worked!');
-    return redirect()->back();
+
+    return redirect('/');
 });

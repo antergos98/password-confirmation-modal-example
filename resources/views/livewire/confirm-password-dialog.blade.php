@@ -1,5 +1,5 @@
 <div>
-    <div wire:ignore.self class="modal modal-lg" id="modal" tabindex="-1">
+    <div wire:ignore.self class="modal modal-lg" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -11,7 +11,7 @@
                     <form wire:submit.prevent="verify" action="#" id="password-verify-form">
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" wire:model.live="password" class="form-control @error('password') is-invalid @enderror" id="password">
+                            <input type="password" wire:model="password" class="form-control @error('password') is-invalid @enderror" id="password">
                             @error('password')
                                 <div class="invalid-feedback">
                                     {{ $message }}
