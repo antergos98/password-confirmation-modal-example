@@ -4,14 +4,18 @@ This project is used as an example to show how I built a Blade component that ca
 
 
 ## Installation
+You will need PHP 8.3
 ```bash
 cp .env.example .env
 composer install
 php artisan key:generate
 php artisan migrate --seed
+php artisan serve
 ```
 
-Usage:
+Now, if you can visit localhost:8000 and try it out. The correct password is `password` because this is the default password of the dummy created by the seeder.
+
+## Usage
 
 ```html
 <x-action-button
